@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI',sans-serif;
+    }
+
+    body{
+      background:
+      url("untuk\ background.png");
+      background-size:cover;
+      background-position:center;
+      min-height:100vh;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+    }
+
+    .payment-container{
+      width:100%;
+      max-width:1000px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:20px;
+      padding:25px;
+      box-shadow:0 0 20px rgba(255,120,50,0.2);
+    }
+
+    .title{
+      font-size:28px;
+      color:#ff9b63;
+      margin-bottom:20px;
+      font-weight:bold;
+    }
+
+    .product{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      margin-bottom:20px;
+      padding:15px;
+      background:rgba(255,255,255,0.05);
+      border-radius:15px;
+    }
+
+    .product img{
+      width:90px;
+      border-radius:12px;
+    }
+
+    .product h3{
+      font-size:22px;
+      margin-bottom:5px;
+    }
+
+    .price{
+      color:#00ff88;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .info{
+      margin-top:20px;
+    }
+
+    .info p{
+      margin:10px 0;
+      color:#ddd;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input, select{
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      background:rgba(255,255,255,0.08);
+      color:white;
+      outline:none;
+      font-size:15px;
+    }
+
+    input::placeholder{
+      color:#ccc;
+    }
+
+    select option{
+      color:black;
+    }
+
+    .btn{
+      padding:15px;
+      border:none;
+      border-radius:30px;
+      background:linear-gradient(45deg,#ff7b42,#ffb36b);
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.03);
+      box-shadow:0 0 15px #ff7b42;
+    }
+
+    .metode{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .metode div{
+      background:rgba(255,255,255,0.06);
+      padding:12px;
+      border-radius:12px;
+      text-align:center;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .metode div:hover{
+      background:#ff7b42;
+    }
+
+    @media(max-width:850px){
+      .payment-container{
+        grid-template-columns:1fr;
+      }
+    }
+    </style>
+</head>
+<body>
+<div class="payment-container">
+<div class="card">
+    <div class="title">Detail Pesanan</div>
+    <div class="product">
+        <img src=".." alt="Produk">
+        <div>
+            <h3>Nexora 12</h3>
+            <div class="price">Rp3.499.000</div>
+        </div>
+        </div>
+        <div class="info">
+            <p>Pengiriman : Gratis Ongkir</p>
+            <p>Estimasi : 2-4  Hari</p>
+            <p>Garansi : Resmi 1 Tahun</p>
+            <p>Total Bayar : <span class="price">Rp3.499.000</span></p>
+        </div>
+</div>
+<div class="card">
+      <div class="title">Pembayaran</div>
+
+      <form>
+
+        <input type="text" placeholder="Nama Lengkap">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Alamat Lengkap">
+        <input type="text" placeholder="Pilih Bank">
+        <input type="text" placeholder="Nomor Kartu / Rekening">
+        <input type="text" placeholder="Kode Pembayaran">
+
+        <div class="metode">
+            <div>Dana</div>
+            <div>OVO</div>
+            <div>Gopay</div>
+        </div>
+        <button class="btn">Bayar Sekarang</button>
+
+      </form>
+    </div>
+</div>
+</body>
+</html>

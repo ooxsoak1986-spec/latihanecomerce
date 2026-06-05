@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="" class="logo" aria-label="Beranda">
+                <span class="mark" aria-hidden="true"></span>
+                <span class="text">Nama Website</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Menu Utama">
+                <ul class="nav-list" role="menubar">
+                <li role="none"><a role="menuitem" href="#">Beranda</a></li>
+                <li class="dropdown" role=" none" tabindex="0">
+                    <a role="menuitem" href="#" aria-haspopup="true" aria-expanded="false">Produk</a>
+                    <div class="submenu" role="menu" aria-keyshortcuts="sub menu produk">
+                        <a role="menuitem" href="#">Produk A</a>
+                        <a role="menuitem" href="#">Produk B</a>
+                        <a role="menuitem" href="#">Produk C</a>
+                    </div>
+                </li>
+
+                <li role="none"><a role="menuitem" href="#">Fitur</a></li>
+                <li role="none"><a role="menuitem" href="#">Harga</a></li>
+
+                <li class="nav-group" role="none" style="margin-bottom: 8px;">
+                    <a class="btn" role="menuitem" href="#">Daftar</a>
+                 </li>
+               </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Contoh Header & Menu</h1>
+        <p class="muted">Ini adalah contoh header yang sepenuhnya dibuat dengan HTML + CSS.
+         Untuk menoakftikan tampilan
+         mobile slide-in, hapus elemen <code>input#nav-toggle</code>
+         dan label hamburger.</p>
+         <p>sesuaikan warna pada <code>:root</code>untuk mengubah tema cepat.
+         jika mau, saya bisa tambahkan versi light-theme atau variasi lain</p>
+    </main>
+</body>
+</html>

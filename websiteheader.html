@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    background: blue;
+}
+.site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 48px;
+    z-index: 30;
+}
+.brand{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+.nav a{
+    color: antiquewhite;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav a.active{
+    color: white;
+}
+.nav a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 2px;
+    background: rgb(0, 0, 217);
+    transition: widht 0.3s ease;
+}
+.nav a:hover{
+    color: aquamarine;
+}
+.nav a:hover::after{
+    width: 100%;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgb(36, 166, 166);
+    padding: 160px 28px 80px;
+    background-image: url('jenis-kopi-di-indonesia-dan-karakteristik-scaled.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+.hero-inner{
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.subhead {
+    color: yellow;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.headline {
+    font-size: 120px;
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 12px 0 18px;
+    color: azure;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.since {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 6px;
+    letter-spacing: 3px;
+}
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    text-align: center;
+    font-size: 13px;
+    color: azure;
+    z-index: 40;
+}
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">Koffee</div>
+        <nav class="nav">
+            <a href="" class="active">Home</a> 
+            <a href="">About</a>
+            <a href="">Service</a>
+            <a href="">Menu</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" role="banner">
+            <div class="arrow-left"></div>
+            <div class="hero-inner">
+                <div class="subhead">Up Have Been Serving</div>
+                <div class="headline">COFFEE </div>
+                <div class="since">Since 1956</div>
+            </div>
+            <div class="arrow-left"></div>
+        </section>
+        <div class="hint">copyright @sultan ganteng</div>
+    </main>
+</body>
+</html>

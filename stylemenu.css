@@ -1,0 +1,37 @@
+.nav-bar {
+    width: 95%;
+    height: 50vh;
+    border: 2px solid black;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 19px black,0 6px 9px white;
+    padding: 20px;
+    background-image: linear-gradient(white,grey,black);
+    justify-content: space-between;
+}
+.nav-bar h3 {
+    color: gray;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.nav-bar a {
+    text-align: right;
+    color: grey;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1 rem;
+    padding: 6px 12px;
+    transition: .3s;
+}
+.nav-bar .active {
+    color: grey;
+}
+.nav-bar a:hover {
+    color: grey;
+    background: white;
+}

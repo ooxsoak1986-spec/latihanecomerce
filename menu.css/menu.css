@@ -1,0 +1,38 @@
+:root {
+    --bg:black;
+    --accent:cyan;
+    --text:white;
+    --muted:gray;
+    --nav-height:64px;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: inter, system-ui, sans-serif;
+    background: black;
+    color: blue;
+}
+
+.site-header {
+    background: linear-gradient(90deg, black, black);
+    position: relative;
+    z-index: 1000;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px black;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

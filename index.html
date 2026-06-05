@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Click Game Pro</title>
+  <link rel="stylesheet" href="Sytyle.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="app">
+  <div class="panel left">
+    <h1>⚡Dark Click</h1>
+    <input type="text" id="playerName" placeholder="Enter your name..." />
+
+    <div class="difficulty">
+    <label>Pilih Mode:</label>
+    <select id="difficulty">
+    <option value="easy">🟢 Easy</option>
+    <option value="normal" selected>🟡 Normal</option>
+    <option value="hard">🔴 Hard</option>
+    <option value="insane">💀 Insane</option>
+  </select>
+</div>
+
+  <div class="stats">
+    <div class="card">Score<br><span id="score">0</span></div>
+    <div class="card">Time<br><span id="time">20</span></div>
+    <div class="card">Coins<br><span id="coins">0</span></div>
+  </div>
+
+    <div class="buttons">
+      <button onclick="startGame()">▶ Play</button>
+      <button onclick="toggleShop()">🛒 Shop</button>
+    </div>
+  </div>
+
+   <div id="shop" class="shop hidden">
+    <h2>🛒 Skin Shop</h2>
+    <div id="skins"></div>
+    <button onclick="toggleShop()">Close</button>
+  </div>
+
+  <div class="panel center">
+    <div id="gameArea">
+      <div id="box"></div>
+    </div>
+    <h2 id="result"></h2>
+  </div>
+
+  <div class="panel right">
+    <h2>🏆 Leaderboard</h2>
+    <ul id="leaderboard"></ul>
+
+    <h2>🎯 Missions</h2>
+    <ul id="missions"></ul>
+  </div>
+<button class="settings-btn" onclick="toggleSettings()">
+  ⚙
+</button>
+
+<div id="settings" class="shop hidden">
+  <h2>⚙️ Settings</h2>
+
+  <label>
+    <input type="checkbox" id="soundToggle"> Sound
+  </label><br>
+
+  <label>
+    <input type="checkbox" id="musicToggle"> Music
+  </label><br>
+
+  <label>
+    Volume:
+    <input type="range" id="volume" min="0" max="1" step="0.1">
+  </label><br>
+
+  <label>
+    <input type="checkbox" id="effectToggle"> Effects
+  </label><br>
+
+  <button onclick="toggleSettings()">Close</button>
+</div>
+
+</div>
+
+<audio id="clickSound" src="https://www.soundjay.com/button/button-4.mp3"></audio>
+<audio id="boomSound" src="https://www.soundjay.com/explosion/explosion-01.mp3"></audio>
+<audio id="bgm" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

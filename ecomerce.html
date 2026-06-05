@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: white;
+        }
+        header {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards;
+        }
+        .card:nth-child(1){ animation-delay: 0.2s; }
+        .card:nth-child(2){ animation-delay: 0.4s; }
+        .card:nth-child(3){ animation-delay: 0.6s; }
+        .card:nth-child(4){ animation-delay: 0.8s; }
+        
+        .image {
+            height: 180px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: #ddd;
+        }
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,transparent,white,transparent);
+            animation: shimmer 1.5s infinite;
+        }
+        button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: red;
+            transform: scale(1.1);
+        }
+        .card:hover {
+            transform: perspective(1000px) rotateY(8deg) scale(1.05);
+            transition: 0.4s;
+        }
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes shimmer {
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyShop</h1>
+    </header>
+
+    <section class="product-container">
+
+        <div class="card">
+            <div class="image shimmer"></div>
+            <h3>Sepatu Sneakers</h3>
+            <p class="price">Rp 199.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="card">
+            <div class="image shimmer"></div>
+            <h3>Jam tangan</h3>
+            <p class="price">Rp 299.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="card">
+            <div class="image shimmer"></div>
+            <h3>Headphone</h3>
+            <p class="price">Rp 149.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+
+        <div class="card">
+            <div class="image shimmer"></div>
+            <h3>Backpack</h3>
+            <p class="price">Rp 249.000</p>
+            <button>Beli Sekarang</button>
+        </div>
+
+    </section>
+</body>
+</html>

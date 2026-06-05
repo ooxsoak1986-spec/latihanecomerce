@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0a0f1a, #000);
+  color: white;
+}
+
+/* layout */
+.app {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* panel glass */
+.panel {
+  background: rgba(20, 20, 30, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+}
+
+/* LEFT */
+.left h1 {
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  background: #111;
+  color: white;
+}
+
+/* stats cards */
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card {
+  flex: 1;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(0,255,255,0.2);
+}
+
+.card span {
+  font-size: 20px;
+  color: #00f7ff;
+}
+
+/* buttons */
+.buttons button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #00f7ff, #0077ff);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+/* CENTER GAME */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameArea {
+  width: 600px;
+  height: 350px;
+  background: #050505;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,255,255,0.2);
+}
+
+/* box target */
+#box {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #00f7ff, #0077ff);
+  position: absolute;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00f7ff;
+  transition: transform 0.1s;
+}
+
+#box:active {
+  transform: scale(0.8);
+}
+
+/* leaderboard */
+.right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right li {
+  background: #111;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* result */
+#result {
+  margin-top: 15px;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+}
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#gameArea {
+  cursor: crosshair;
+}
+/* efek shake */
+@keyframes shake {
+  0% { transform: translate(0px); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(5px, 5px); }
+  100% { transform: translate(0px); }
+}
+
+.shake {
+  animation: shake 0.2s;
+}
+.shop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20,20,30,0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px cyan;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.skin {
+  background: #111;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+#missions {
+  list-style: none;
+  padding: 0;
+}
+
+#missions li {
+  background: #111;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+#settings label {
+  display: block;
+  margin: 10px 0;
+}
+/* ===== SETTINGS BUTTON PREMIUM ===== */
+.settings-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+
+  background: linear-gradient(45deg, #00f7ff, #0077ff);
+  color: black;
+
+  box-shadow: 0 0 20px rgba(0,255,255,0.6);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* hover glow */
+.settings-btn:hover {
+  transform: scale(1.15) rotate(30deg);
+  box-shadow: 0 0 30px #00f7ff, 0 0 60px #0077ff;
+}
+
+/* klik efek */
+.settings-btn:active {
+  transform: scale(0.9);
+}
+
+/* animasi pulse */
+.settings-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00f7ff;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { opacity: 0; }
+}
+#settings {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.difficulty {
+  margin-top: 10px;
+}
+
+.difficulty select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  border: none;
+}

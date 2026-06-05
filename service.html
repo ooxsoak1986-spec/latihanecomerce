@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: #fff9f0;
+            color: #3b2a24;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .wrap{
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 56px 20px;
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 44px;
+        }
+        .heading .kecil{
+            display: block;
+            font-size: 13px;
+            letter-spacing: 6px;
+            color: #c8874e;
+            margin-bottom: 12px;
+        }
+        .heading h1{
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            margin: 0;
+            color: #412a25;
+        }
+        .services-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px 40px;
+            align-items: start;
+        }
+        .service-card{
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .service-image{
+            width: 220px;
+            height: 220px;
+            flex: 0 0 220px;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #f3e8df;
+            display: inline-block;
+        }
+        .service-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .service-body{
+            flex: 1 1 auto;
+        }
+        .icon{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #d9a665;
+            color: #2f1f1a;
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .service-title{
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2f1f1a;
+        }
+        .service-desc{
+            margin: 0;
+            color: #6a5761;
+            line-height: 1.7;
+        }
+        .service-card:hover .service-image{
+            transform: scale(1.02);
+            transition: transform 220ms ease;
+        }
+        @media (max-widht:1000px){
+            .services-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .service-image{
+                width: 180px;
+                height: 180px;
+                flex-basis: 180px;
+            }
+            .heading h1{
+                font-size: 48px;
+            }
+        }
+        @media (max-width:700px){
+            .services-grid{
+                grid-template-columns: 1fr;
+                gap: 26px;
+            }
+            .service-card{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .service-image{
+                width: 100%;
+                height: 260px;
+                flex-basis: auto;
+            }
+            .service-body{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<main class="wrap">
+    <header class="heading">
+        <span class="kecil">OUR SERVICES</span>
+        <h1>Fresh & Organic Beans</h1>
+    </header>
+    <section class="services-grid">
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (4).jpg" alt="hadphone"></div>
+            <div class="service-body">
+                <h3 class="service-title">Headset</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (5).jpg" alt="earphone"></div>
+            <div class="service-body">
+                <h3 class="service-title">Speaker</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (6).jpg" alt="speaker"></div>
+            <div class="service-body">
+                <h3 class="service-title">Speaker</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (8).jpg" alt="speaker"></div>
+            <div class="service-body">
+                <h3 class="service-title">Tablet</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (7).jpg" alt="speaker"></div>
+            <div class="service-body">
+                <h3 class="service-title">Handphone</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+        <article class="service-card">
+            <div class="service-image"><img src="OIP (3).jpg" alt="speaker"></div>
+            <div class="service-body">
+                <h3 class="service-title">Earphone</h3>
+                <p class="service-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto totam, sint rerum tempore ut quia in quasi animi, sapiente ad accusamus dolores nam ea, nulla voluptate laborum? Excepturi, ipsam impedit.</p>
+            </div>
+        </article>
+    </section>
+</main>
+</html>

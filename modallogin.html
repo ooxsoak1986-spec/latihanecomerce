@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: orange;
+        }
+        .open-modal{
+            padding: 12px 25px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .open-modal:hover{
+            background: orange;
+        }
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(grey,white);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal:target{
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content{
+            background: linear-gradient(grey,white);
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 16px;
+            width: 320px;
+            color: white;
+            position: relative;
+            box-shadow: 0 8px 32px black;
+            animation: fadein 0.4s ease;
+        }
+        @keyframes fadein{
+            from{
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .close{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            text-decoration: none;
+            font-size: 23px;
+            color: white;
+        }
+        .modal-content h2{
+            text-align: center;
+            margin-bottom: 19px;
+        }
+        .input-group{
+            margin-bottom: 15px;
+            border-radius: 20px;
+        }
+        .input-group label{
+            font-size: 15px;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .input-group input{
+            width: 90%;
+            padding: 8px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+        .btn{
+            width: 50%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: green;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover{
+            background: red;
+        }
+        .footer-text{
+            text-align: center;
+            margin-top: 12px;
+            font-size: 15px;
+        }
+        .footer-text a{
+            color: white;
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#loginModal" class="open-modal">Login</a>
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        <h2>Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="">Email</label>
+                <input type="email" placeholder="Masukan Email" required>
+            </div>
+            <div class="input-group">
+                <label for="">Password</label>
+                <input type="password" placeholder="Masukan Password" required>
+            </div>
+            <button class="btn">Masuk</button>
+            <div class="footer-text">
+                <marquee>Belum Punya Akun? <a href="#">Registrasi</a></marquee>
+
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

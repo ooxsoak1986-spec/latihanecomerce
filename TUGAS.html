@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(jenis-kopi-di-Indonesia-dan-karakteristik-scaled.jpg);
+            min-height: 100vh;
+            color: #333;
+            height: 1000px;
+        }
+
+        .navbar{
+            background: white;
+            box-shadow: 0 2px 20px black;
+            position:fixed ;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            height: 70px;
+        }
+
+        .navbar .logo{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .navbar .nav-links{
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links li{
+            margin-left: 2rem;
+        }
+
+        .navbar .nav-links a{
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .navbar .nav-links a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg,#667eea, rgb(194, 86, 194));
+            transition: width 0.3s ease;
+        }
+        
+        .navbar .nav-links a:hover::after{
+            width: 100%;
+        }   
+        .navbar .nav-links a:hover{
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        .navbar .nav-links a.active{
+            color: #667eea;
+        }
+        .navbar .nav-links a.active:after{
+            width: 100%;
+        }
+        .content{
+            padding: 2rem;
+            margin-top: 90px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .hero{
+          text-align: center;
+          padding: 4rem 2rem;
+          border-radius: 20px;
+          margin-bottom: 2rem;
+        }  
+        .hero h4{
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .hero h1{
+            font-size: 5rem;
+            color: aliceblue;
+        }
+        .hamburger{
+            display: 0;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.3s;
+        }
+        .hamburger span{
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        #menu-toggle{
+            display: none;
+
+        }
+        #menu-toggle:checked ~ .hamburger span:nth-child(1)
+        {
+
+            transform: rotate(-45deg) translate(-5px,6px);
+        }
+        #menu-toggle:checked ~ .hamburger span:nth-child(2)
+        {
+            opacity: 0;
+        }
+        #menu-toggle:checked ~ .hamburger span:nth-child(3)
+        {
+            transform: rotate(45deg) translate(-5px,-6px);
+        }
+        @media(max-width: 768px) {
+            .navbar{
+                padding: 0 1rem;
+                height: 60px;
+            }
+              .navbar .logo{
+                font-size: 1.5rem;
+              }
+              .hamburger{
+                display: flex;
+              }
+              .navbar .nav-links{
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.95);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+              }
+              #menu-toggle:checked ~ .nav-links{
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+              }
+              .navbar .nav-links li{
+                margin: 0.5rem 0;
+                text-align: center;
+              }
+              .hero h1{
+                font-size: 2rem;
+              }
+              .hero p{
+                font-size: 1rem;
+              }
+            }
+            .logo{
+                color: white;
+            }
+            .a{
+                color: white;
+            }
+            .about p{
+                color: white;
+                text-align: center;
+            }
+            
+        
+ </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#" class="logo" >My Website</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="#tours" class="active">Tours</a></li>
+            <li><a href="#directions">Directions</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#voconcies">Voconcies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <select name="combobox" id="IN">IN</select>
+        <select name="combobox" id="IN">IN</select>
+    </nav>
+
+    <div class="content">
+        <section class="hero">
+            <h4>Welcome To your</h4>
+            <h1>Wonderland
+            </h1>
+        </section>
+
+        <div class="about">
+            <p>We Organize Tours in Russia and neighboring countles <br>
+                <Data>Discover the beauty of your home country with Wonderland Tour</Data>
+            </p>
+            </div>
+
+
+</body>
+</html>

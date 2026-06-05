@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+
+            background: linear-gradient(145deg,rgb(13, 13, 203),rgb(178, 13, 178));
+        }
+        .header{
+            color: white;
+        }
+        header{
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+
+        .card{
+
+            background: linear-gradient(145deg,rgb(13, 13, 203),rgb(178, 13, 178));
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 5px 15px black;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp  0.8s forwards;
+        }
+        image h3{
+            width: 200px;
+        }
+        /* IMAGE */
+        .imag{
+            height: 60px;
+            width: 50px;
+            border-radius: 10px;
+            background-size: cover;
+        }
+        .imag img{
+            background-size: cover;
+            width: 50px;
+            height: 60px;
+        }
+        .imag p{
+            text-align: left;
+            align-items: flex-start;
+        }
+        .new{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        /* SHIMMER EFFECT */
+        .shimmer{
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        
+        /* BUTTON */
+        .button{
+            background: black;
+            color: wheat;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #ff4d4d;
+            transform: scale(1.1);
+        }
+
+        /* Hover 3D EFFECT */
+        .card:hover{
+            transform: perspective(1000px) rotateY(8deg) scale(1.05);
+            transition: 0.4s;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes shimmer{
+            100%{
+                left: 100%;
+            }
+        }
+        .new p{
+            margin-left: -60px;
+            margin-top: -20px;
+        }
+        .new2 p{
+            margin-left: -10px;
+            margin-top: -20px;
+        }
+        .new2{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        .new3 p{
+            margin-left: -88px;
+            margin-top: -20px;
+        }
+        .new3{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        .fotomap{
+            width: 1500.4px; 
+            height: 300px;
+            background-image: url(MAP.png);
+            background-size: cover;
+        }
+        h1{
+            align-items: center;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p{
+            text-align: center;
+            font-size: smaller;
+        }
+        .kon{
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>What People Say</h1>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam eligendi, rem at ducimus rerum quidem voluptate maxime exercitationem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde dolor autem quaerat modi, consectetur natus adipisci nam fuga quam! Quae ab pariatur </p>
+    <section class="product-container">
+
+        <div class="card">
+            <div class="imag shimmer"><img class="kon" src="OIP (17).jpg" alt="">
+                </div>
+            <div class="new"><h3>Sarah Jonshon</h3>
+                <p>Small Business Owner</p>
+            </div>
+            <p class="price">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In labore quas quae facilis! Quibusdam veritatis numquam cumque ratione, eum, distinctio ducimus a impedit atque praesentium quae ipsam error earum dignissimos.</p>
+        </div>
+
+       <div class="card">
+            <div class="imag shimmer"><img class="kon" src="OIP (15).jpg" alt="">
+                </div>
+            <div class="new2"><h3>David Patel</h3>
+                <p>Project Manager</p>
+            </div>
+            <p class="price">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam praesentium minima vitae consectetur sed quidem et ab, facilis dignissimos quis. Ratione consequuntur placeat nemo delectus nulla iste reprehenderit eos?</p>
+        </div>
+        <div class="card">
+            <div class="imag shimmer"><img class="kon" src="OIP (16).jpg" alt="">
+                </div>
+            <div class="new3"><h3>Emily Carter</h3>
+                <p>Operation Manager</p>
+            </div>
+            <p class="price">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto ullam maiores hic quod nemo aliquam doloribus tenetur quidem maxime ab numquam sapiente ducimus, natus veritatis necessitatibus quo molestiae. Quasi, veritatis!</p>
+        </div>
+    </section>
+    <div class="fotomap">
+
+    </div>
+</body>
+</html>

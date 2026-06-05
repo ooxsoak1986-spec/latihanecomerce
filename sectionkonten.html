@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section / Konten Website</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        section.menu-section{
+            position: relative;
+            background-color: aquamarine;
+            text-align: center;
+            border: 2px solid black;
+        }
+        section.menu-section::before,
+        section.menu-section::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 80px;
+            background-size: cover;
+            top: -60px;
+            left: 0;
+        }
+        section.menu-section::after{
+            height: 60px;
+            top: unset;
+            bottom: 60px;
+        }
+        section.menu-section h2{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        section.menu-section h1{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        section.menu-section>p{
+            font-size: 16px;
+            margin-bottom: 40px;
+            width: 100px;
+            border: 2px solid black;
+        }
+        div.produk{
+            padding: 20px;
+            width: 25%;
+        }
+        div.produk img{
+            transition: all,0.4s ease;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px -2px black;
+        }
+        div.produk img:hover{
+            transform: scale(0.9);
+            border-radius: 50px;
+        }
+        div.produk p{
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="menu-section">
+        <h1>Menampilkan Menu - Menu Di Website</h1>
+        <p>Nikmati Menu - Menu Yang Ditampilkan Website</p>
+        <div class="produk">
+            <img src="jenis-kopi-di-indonesia-dan-karakteristik-scaled.jpg" alt="King sultan" height="200px" width="200px">
+            <p>King sultan</p>
+            <img src="jenis-kopi-di-indonesia-dan-karakteristik-scaled.jpg" alt="King sultan" height="200px" width="200px">
+            <p>King sultan</p>
+        </div>
+    </section>
+</body>
+</html>

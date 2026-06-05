@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+.site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 48px;
+    z-index: 30;
+}
+.brand{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.nav a.active{
+    color: black;
+}
+
+.nav a:hover{
+    color: black;
+}
+.nav a:hover::after{
+    width: 100%;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 160px 28px 80px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+}
+.hero-inner{
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.subhead {
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.headline {
+    font-size: 80px;
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 12px 0 18px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.since {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 6px;
+    letter-spacing: 3px;
+}
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    text-align: center;
+    font-size: 13px;
+    z-index: 40;
+}
+    </style>
+
+    <link rel="stylesheet" href="pretest.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <h3>Enblox</h3>
+                <ul>
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Feature</a>
+                    <a href="#">Blog</a>
+                    <a href="#"></a>Paicing</a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero" role="banner">
+            <div class="arrow-left"></div>
+            <div class="hero-inner">
+                <div class="subhead"></div>
+                <div class="headline"> Work Smarter</div>
+                <div class="headline">Not Harder</div>
+                <div class="since">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odio officiis enim consequuntur architecto ipsam cupiditate nihil voluptatem voluptates?</div>
+            <div class="arrow-left"></div>
+        </section>
+    </main>
+
+</body>
+</html>

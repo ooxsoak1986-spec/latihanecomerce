@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family:Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+        }
+
+
+        header{
+            background: #111;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+
+        .card{
+
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px black;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeUp  0.8s forwards;
+        }
+        image h3{
+            width: 200px;
+        }
+        /* IMAGE */
+        .imag{
+            height: 60px;
+            width: 50px;
+            border-radius: 10px;
+            background-size: cover;
+        }
+        .imag img{
+            background-size: cover;
+            width: 50px;
+            height: 60px;
+        }
+        .imag p{
+            text-align: left;
+            align-items: flex-start;
+        }
+        .new{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        /* SHIMMER EFFECT */
+        .shimmer{
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        
+        /* BUTTON */
+        .button{
+            background: black;
+            color: wheat;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #ff4d4d;
+            transform: scale(1.1);
+        }
+
+        /* Hover 3D EFFECT */
+        .card:hover{
+            transform: perspective(1000px) rotateY(8deg) scale(1.05);
+            transition: 0.4s;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes shimmer{
+            100%{
+                left: 100%;
+            }
+        }
+        .new p{
+            margin-left: -60px;
+            margin-top: -20px;
+        }
+        .new2 p{
+            margin-left: -10px;
+            margin-top: -20px;
+        }
+        .new2{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        .new3 p{
+            margin-left: -88px;
+            margin-top: -20px;
+        }
+        .new3{
+            margin-top: -60px;
+            width: 200px;
+            margin-left: 30px;
+        }
+        .fotomap{
+            width: 1500.4px; 
+            height: 300px;
+            background-image: url(MAP.png);
+            background-size: cover;
+        }
+        h1{
+            align-items: center;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p{
+            text-align: center;
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MyShop</h1>
+    </header>
+    <h1>Apa Kata Mereka?</h1>
+    <p>Kami berikan fakta dan data, karena kepuasan pelanggan selalu nomor 1 untuk kami</p>
+    <section class="product-container">
+
+        <div class="card">
+            <div class="imag shimmer"><img src="Screenshot 2025-11-07 111734 - Copy.png" alt="">
+                </div>
+            <div class="new"><h3>Benny Ovtavian</h3>
+                <p>Mahasiswa</p>
+            </div>
+            <p class="price">"perdana kesini langsung cocok dari segi tempat dan rasa, Baristanya ramah dan melayani dengan baik,tidak sungkan bertanya keinginan pengunjung."</p>
+        </div>
+
+       <div class="card">
+            <div class="imag shimmer"><img src="alya san.png" alt="">
+                </div>
+            <div class="new2"><h3>Rena Oktaviana</h3>
+                <p>Karyawan Swasta</p>
+            </div>
+            <p class="price">"asik buat sm tmn2, tempatnya nyaman dan yg buat seru bnyk game2ny yg bs dimainin brg tmn2 / saudara,menunya enak2, pokoknya recomended bgt deh tempatnya wajib coba!!!, Pelayannya ramah bgt."</p>
+        </div>
+        <div class="card">
+            <div class="imag shimmer"><img src="LOPEE.png" alt="">
+                </div>
+            <div class="new3"><h3>Bagas Renaldo</h3>
+                <p>Dosen</p>
+            </div>
+            <p class="price">"Tempany nyaman sekali ,pasti betah kalo dateng ... selain tempat yg nyaman ,pelayannya good bgt... dan kalian yg dateng ke Kopi Kuy jgn ewatkan permainan yg disediakan Kopi Kuy, Banyak bgt game nya."</p>
+        </div>
+    </section>
+    <div class="fotomap">
+
+    </div>
+</body>
+</html>

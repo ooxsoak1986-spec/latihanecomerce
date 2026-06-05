@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okta-Gadget</title>
+
+<style>
+
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background-image: url(untuk\ background.png);
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+header{
+  backdrop-filter: blur(15px);
+  background: rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#ff8c5a;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff7e5f;
+}
+
+/* ================= HERO ================= */
+.hero{
+  text-align:center;
+  padding:90px 20px 40px;
+}
+
+.hero h2{
+  font-size:38px;
+  color:#ff9b73;
+  text-shadow:0 0 20px rgba(255,120,50,0.5);
+}
+
+.hero p{
+  margin-top:15px;
+  color:#ddd;
+  font-size:18px;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:15px 35px;
+
+  border:none;
+  border-radius:14px;
+
+  background:linear-gradient(135deg,#ff7b54,#ffb26b);
+
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(255,140,90,0.5);
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= PRODUK ================= */
+.produk-section{
+  padding:40px 20px 80px;
+  text-align:center;
+}
+
+.produk-section h2{
+  font-size:40px;
+  margin-bottom:40px;
+  color:white;
+}
+
+.produk-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.harga{
+  color:#00ff99;
+  font-size:25px;
+  margin:15px 0;
+  font-weight:bold;
+}
+
+.card button{
+  width:85%;
+  margin-bottom:20px;
+  padding:13px;
+
+  border:none;
+  border-radius:12px;
+
+  background:linear-gradient(135deg,#ff7b54,#ffb26b);
+
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ================= KONTAK ================= */
+.kontak{
+  width:90%;
+  max-width:900px;
+  margin:80px auto;
+  padding:50px;
+
+  background:rgba(0,0,0,0.82);
+  border:1px solid rgba(255,120,50,0.2);
+
+  backdrop-filter:blur(8px);
+
+  border-radius:25px;
+
+  box-shadow:
+    0 0 20px rgba(255,120,50,0.15),
+    0 0 50px rgba(255,120,50,0.08);
+
+  text-align:center;
+}
+
+.kontak h2{
+  color:#ff8c5a;
+  font-size:42px;
+  margin-bottom:35px;
+  text-shadow:0 0 12px rgba(255,120,50,0.5);
+}
+
+.kontak input,
+.kontak textarea{
+  width:100%;
+  max-width:420px;
+
+  margin:15px auto;
+  padding:16px 18px;
+
+  display:block;
+
+  border:1px solid rgba(255,140,90,0.2);
+  border-radius:14px;
+
+  background:rgba(255,255,255,0.08);
+  color:white;
+
+  outline:none;
+  transition:0.3s;
+}
+
+.kontak input::placeholder,
+.kontak textarea::placeholder{
+  color:rgba(255,255,255,0.7);
+}
+
+.kontak input:focus,
+.kontak textarea:focus{
+  border-color:#ff8c5a;
+  box-shadow:0 0 15px rgba(255,140,90,0.35);
+}
+
+.kontak button{
+  margin-bottom:25px;
+
+  width:100%;
+  max-width:420px;
+
+  padding:12px;
+
+  border:none;
+  border-radius:14px;
+
+  background:linear-gradient(135deg,#ff7b54,#ffb26b);
+
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.kontak button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(255,140,90,0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .produk-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .kontak{
+    padding:35px 20px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+
+  <div class="logo">Okta-Gadget</div>
+
+  <nav>
+    <a href="PROJECT.html">Home</a>
+    <a href="Kontak.html">Kontak</a>
+    <a href="baru.html">Login</a>
+    <a href="sliderlogin.html">Register</a>
+  </nav>
+
+</header>
+<section class="kontak">
+
+  <h2>Kontak</h2>
+
+  <input type="text" placeholder="WhatsApp: 0812-xxxx-xxxx">
+
+  <input type="email" placeholder="Email: support@tokokamu.com">
+
+  <input type="text" placeholder="Jam Operasional: Sabtu - Minggu">
+
+  <input type="text" placeholder="Kepuasan Anda adalah prioritas kami."></textarea>
+
+  <button>Hubungi</button>
+
+</section>
+
+</body>
+</html>

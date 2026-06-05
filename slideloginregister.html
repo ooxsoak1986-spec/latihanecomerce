@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .container{
+            width: 800px;
+            height: 500px;
+            background: #fff;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        #toggle{
+            display: none;
+        }
+        .forms{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .form-box{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 0.5s ease;
+        }
+        h2{
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input{
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        input:focus{
+            border-radius: #667eea;
+        }
+        button{
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #5a67d8;
+        }
+        .toggle-text{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .toggle-text label{
+            color: #667eea;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .login {
+            opacity: 1;
+            pointer-events: auto;
+            width: 350px;
+        }
+        .register{
+            opacity: 0;
+            pointer-events: none;
+            margin-left: 400px;
+            width: 350px;
+        }
+        #toggle:checked~.forms .login{
+            opacity: 0;
+            pointer-events: auto;
+        }
+        #toggle:checked~.forms .register{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .overlay{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            transition: all 0.5s ease;
+        }
+        #toggle:checked~.overlay{
+            transform: translateX(-100%);
+        }
+        .overlay h2{
+            margin-bottom: 10px;
+        }
+        .overlay p{
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .overlay label{
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .overlay label:hover{
+            background: #fff;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <input type="checkbox" id="toggle">
+    <div class="forms">
+        <div class="form-box login">
+        <h2>Login</h2>
+        <input type="email" placeholder="email">
+        <input type="password" placeholder="password">
+        <button>Login</button>
+
+        <p class="toggle-text">
+            Belum punya akun?
+            <label for="toggle">Register</label>
+        </p>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <input type="text" placeholder="Nama">
+            <input type="email" placeholder="email">
+            <input type="password" placeholder="password">
+            <button>Register</button>
+
+            <p class="toggle-text">
+                Sudah punya akun?
+                <label for="toggle">Login</label>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="overlay">
+        <h2>Welcome</h2>
+        <p>Pilih menu untuk berpindah antara login dan Register</p>
+        <label for="toggle">toggle</label>
+    </div>
+</div>
+
+</body>
+</html>
